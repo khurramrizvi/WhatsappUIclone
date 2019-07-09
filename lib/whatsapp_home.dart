@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toast/toast.dart';
 import 'pages/call_screen.dart';
 import 'pages/camera_screen.dart';
 import 'pages/status_screen.dart';
@@ -59,7 +60,9 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
         new CallsScreen(),
       ]),
       floatingActionButton: new FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Toast.show("start new chat", context,duration: 3,gravity: 0,backgroundColor: Theme.of(context).accentColor);
+          },
         child: Icon(Icons.message,color: Colors.white,),
           ),
     );
